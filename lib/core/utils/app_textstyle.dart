@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 class AppTextStyle {
   // Poppins Medium 14
   static TextStyle medium14 = const TextStyle(
-    color: Colors.white,
     fontSize: 14,
     fontWeight: FontWeight.w500, // Medium
     fontFamily: 'Poppins',
@@ -19,7 +18,7 @@ class AppTextStyle {
 
   // Poppins Medium 10
   static TextStyle medium10 = const TextStyle(
-    color: Colors.white,
+    color: Colors.grey,
     fontSize: 10,
     fontWeight: FontWeight.w500, // Medium
     fontFamily: 'Poppins',
@@ -27,9 +26,8 @@ class AppTextStyle {
 
   // Poppins Bold 24
   static TextStyle bold24 = const TextStyle(
-    color: Colors.white,
     fontSize: 24,
-    fontWeight: FontWeight.bold, // Bold
+    fontWeight: FontWeight.w800, // Bold
     fontFamily: 'Poppins',
   );
 
@@ -59,7 +57,7 @@ class AppTextStyle {
 
   // Poppins Medium 11.7
   static TextStyle medium11_7 = const TextStyle(
-    color: Colors.white,
+    color: Colors.grey,
     fontSize: 11.7,
     fontWeight: FontWeight.w500, // Medium
     fontFamily: 'Poppins',
@@ -75,7 +73,6 @@ class AppTextStyle {
 
   // Poppins SemiBold 14
   static TextStyle semiBold14 = const TextStyle(
-    color: Colors.white,
     fontSize: 14,
     fontWeight: FontWeight.w600, // SemiBold
     fontFamily: 'Poppins',
