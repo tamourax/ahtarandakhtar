@@ -1,12 +1,7 @@
-
-
-import 'package:ahtarandakhtar/core/utils/AppImage.dart';
 import 'package:ahtarandakhtar/core/utils/app_color.dart';
 import 'package:ahtarandakhtar/core/utils/app_textstyle.dart';
 import 'package:ahtarandakhtar/core/widgets/custom_text_button.dart';
 import 'package:flutter/material.dart';
-
-
 
 class WhatIsInYourKitchen extends StatelessWidget {
   const WhatIsInYourKitchen({
@@ -39,17 +34,16 @@ class WhatIsInYourKitchen extends StatelessWidget {
                 style: AppTextStyle.medium11,
               ),
               const Padding(
-                padding:  EdgeInsets.symmetric(
-                       vertical: 22),
+                padding: EdgeInsets.symmetric(vertical: 22),
                 child: CustomTextButton(),
               ),
             ],
           ),
-          const SizedBox(width: 9,),
+          const SizedBox(
+            width: 9,
+          ),
           Flexible(
-            child: Image.asset(
-             'assets/images/Spoon.png'
-            ),
+            child: Image.asset('assets/images/Spoon.png'),
           )
         ],
       ),
