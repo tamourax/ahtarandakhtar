@@ -9,5 +9,13 @@ class Assets {
   /// Assets for assetsImagesHook
   /// assets/images/hook.svg
   static const String assetsImagesHook = "assets/images/hook.svg";
+
+  /// Assets for assetsImagesMenuIcon
+  /// assets/images/menu_icon.svg
+  static const String assetsImagesMenuIcon = "assets/images/menu_icon.svg";
+
+  /// Assets for assetsImagesSpoon
+  /// assets/images/Spoon.png
+  static const String assetsImagesSpoon = "assets/images/Spoon.png";
 }
 

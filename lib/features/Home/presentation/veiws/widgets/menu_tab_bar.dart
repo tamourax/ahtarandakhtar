@@ -38,7 +38,7 @@ class _MenuTabBarState extends State<MenuTabBar> {
               selectedColor: AppColor.kPrimaryColor.withOpacity(0.2),
               label: Text(
                 label,
-                style: AppTextStyle.semiBold14
+                style: AppTextStyle.medium14
                     .copyWith(color: AppColor.kPrimaryColor),
               ),
               selected: selectedChip == label,

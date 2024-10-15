@@ -20,7 +20,7 @@ class CustomTextButton extends StatelessWidget {
             horizontal: 24, vertical: 8),
         child: Text(
           'Find Recipes',
-          style: AppTextStyle.semiBold18,
+          style: AppTextStyle.semiBold16.copyWith(fontWeight: FontWeight.w500),
         ),
       ),
     );
