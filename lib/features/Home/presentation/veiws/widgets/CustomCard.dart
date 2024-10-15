@@ -8,21 +8,24 @@ class Customcard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      decoration: BoxDecoration(boxShadow: [
-        BoxShadow(
-            blurRadius: 100, color: Colors.black, blurStyle: BlurStyle.outer)
-      ]),
-      child: SizedBox(
-        height: 100,
-        width: 100,
+    return Center(
+      child: Container(
+        height: 150,
+        width: 170,
+        decoration: BoxDecoration(boxShadow: [
+          BoxShadow(
+              blurRadius: 100, color: Colors.black, blurStyle: BlurStyle.outer)
+        ]),
         child: Stack(
-          clipBehavior: Clip.antiAlias,
+          clipBehavior: Clip.hardEdge,
           children: [
             Card(
+              clipBehavior: Clip.none,
               child: Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 15),
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 15, vertical: 20),
                 child: Column(
+                  mainAxisAlignment: MainAxisAlignment.end,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
@@ -35,25 +38,37 @@ class Customcard extends StatelessWidget {
                       style: AppTextStyle.medium10,
                     ),
                     Row(
-                      mainAxisAlignment: MainAxisAlignment.start,
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Icon(
                           Icons.access_time_filled,
+                          size: 16,
                           color: AppColor.kPrimaryColor,
                         ),
-                        Text(
-                          '20 min',
-                          style: AppTextStyle.regular12
-                              .copyWith(color: AppColor.kPrimaryColor),
+                        Padding(
+                          padding: const EdgeInsets.only(right: 1),
+                          child: Text(
+                            '20 min',
+                            style: AppTextStyle.regular12
+                                .copyWith(color: AppColor.kPrimaryColor),
+                          ),
                         ),
-                        Icon(Icons.bolt, color: AppColor.kPrimaryColor)
+                        Icon(
+                          Icons.bolt,
+                          color: AppColor.kPrimaryColor,
+                          size: 18,
+                        )
                       ],
                     )
                   ],
                 ),
               ),
             ),
-            Image.asset(Assets.assetsFoodItem)
+            Positioned(
+              child: Image.asset(Assets.assetsFoodItem),
+              bottom: 100,
+              left: 10,
+            )
           ],
         ),
       ),

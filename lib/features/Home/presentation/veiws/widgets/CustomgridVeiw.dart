@@ -7,9 +7,13 @@ class CustomGridveiw extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GridView.builder(
-      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-          mainAxisSpacing: 10, crossAxisCount: 2, crossAxisSpacing: 10),
-      itemBuilder: (context, index) => Customcard(),
+      itemCount: 1,
+      gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+          childAspectRatio: 3 / 2,
+          mainAxisSpacing: 10,
+          crossAxisCount: 2,
+          crossAxisSpacing: 10),
+      itemBuilder: (context, index) => const Customcard(),
     );
   }
 }
