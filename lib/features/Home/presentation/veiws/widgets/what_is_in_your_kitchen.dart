@@ -40,7 +40,7 @@ class WhatIsInYourKitchen extends StatelessWidget {
               ),
               const Padding(
                 padding:  EdgeInsets.symmetric(
-                    horizontal: 8, vertical: 22),
+                       vertical: 22),
                 child: CustomTextButton(),
               ),
             ],

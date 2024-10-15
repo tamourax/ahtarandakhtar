@@ -28,7 +28,7 @@ class _MenuTabBarState extends State<MenuTabBar> {
             child: ChoiceChip(
               showCheckmark: false,
               shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(14),
+                borderRadius: BorderRadius.circular(50),
               ),
               padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
               side: BorderSide(
