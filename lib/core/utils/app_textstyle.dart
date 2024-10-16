@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
 class AppTextStyle {
   // Poppins Medium 14
@@ -49,7 +50,7 @@ class AppTextStyle {
 
   // Poppins Regular 12.8
   static TextStyle regular12 = const TextStyle(
-    color: Colors.white,
+    color: Colors.grey,
     fontSize: 12,
     fontWeight: FontWeight.normal, // Regular
     fontFamily: 'Poppins',

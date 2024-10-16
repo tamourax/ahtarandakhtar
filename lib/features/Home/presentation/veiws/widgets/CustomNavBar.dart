@@ -5,7 +5,9 @@ class Customnavbar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return NavigationBar(destinations: [
+    return NavigationBar(
+      height: 66,
+      destinations: const [
       NavigationDestination(
         icon: Icon(Icons.home),
         label: 'Home',
