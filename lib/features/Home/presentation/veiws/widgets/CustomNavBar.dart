@@ -5,6 +5,15 @@ class Customnavbar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return NavigationBar(destinations: [Icon(Icons.home)]);
+    return NavigationBar(destinations: [
+      NavigationDestination(
+        icon: Icon(Icons.home),
+        label: 'Home',
+      ),
+      NavigationDestination(
+        icon: Icon(Icons.home),
+        label: 'Home',
+      )
+    ]);
   }
 }

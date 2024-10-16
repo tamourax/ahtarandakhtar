@@ -1,3 +1,4 @@
+import 'package:ahtarandakhtar/features/Home/presentation/veiws/widgets/CustomNavBar.dart';
 import 'package:ahtarandakhtar/features/Home/presentation/veiws/widgets/app_bar.dart';
 
 import 'package:ahtarandakhtar/features/Home/presentation/veiws/widgets/menu_tab_bar.dart';
@@ -31,7 +32,16 @@ class HomeViewBody extends StatelessWidget {
           ),
         ),
         SliverToBoxAdapter(
-          child: CustomGridveiw(),
+          child: SizedBox(
+            height: 230,
+            child: CustomGridveiw(),
+          ),
+        ),
+        SliverToBoxAdapter(
+          child: Padding(
+            padding: EdgeInsets.symmetric(vertical: 50),
+            child: Customnavbar(),
+          ),
         )
       ],
     );
