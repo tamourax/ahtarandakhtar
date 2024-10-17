@@ -31,10 +31,10 @@ class _CustomnavbarState extends State<Customnavbar> {
         ),
         NavigationDestination(
           icon: Icon(
-            Icons.settings,
+            Icons.restaurant,
             color: isSelected == 1 ? AppColor.kPrimaryColor : Colors.black,
           ),
-          label: 'Settings',
+          label: 'Recipes',
         ),
       ],
     );
