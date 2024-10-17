@@ -18,4 +18,6 @@ class Assets {
   /// assets/images/Spoon.png
   static const String assetsImagesSpoon = "assets/images/Spoon.png";
   static const String assetsFoodItem = "assets/images/FoodItem.png";
+  static const String assetsLogo = "assets/logo/Logo.svg";
+  static const String assetsLogoAnimate = "assets/logo/LogoAnimate.gif";
 }
