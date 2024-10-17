@@ -1,4 +1,3 @@
-
 import 'package:ahtarandakhtar/core/utils/AppImage.dart';
 import 'package:ahtarandakhtar/features/Home/presentation/veiws/widgets/food_card_text.dart';
 import 'package:flutter/material.dart';
@@ -17,17 +16,16 @@ class CardInfoDetails extends StatelessWidget {
           child: Image.asset(
             Assets.assetsFoodItem,
             fit: BoxFit.cover,
-            height: double.infinity, 
-            width: double.infinity, 
+            height: double.infinity,
+            width: double.infinity,
           ),
         ),
-    
         Positioned(
           bottom: 0,
           left: 0,
           right: 0,
           child: AspectRatio(
-            aspectRatio: 168/86,
+            aspectRatio: 168 / 86,
             child: Container(
               decoration: const BoxDecoration(
                 color: Colors.white,
@@ -42,5 +40,3 @@ class CardInfoDetails extends StatelessWidget {
     );
   }
 }
-
-

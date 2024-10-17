@@ -1,5 +1,5 @@
 import 'package:ahtarandakhtar/features/Home/presentation/veiws/widgets/CustomCard.dart';
-import 'package:ahtarandakhtar/features/Home/presentation/veiws/widgets/CustomNavBar.dart';
+
 import 'package:ahtarandakhtar/features/Home/presentation/veiws/widgets/app_bar.dart';
 import 'package:ahtarandakhtar/features/Home/presentation/veiws/widgets/menu_tab_bar.dart';
 import 'package:ahtarandakhtar/features/Home/presentation/veiws/widgets/what_is_in_your_kitchen.dart';
@@ -30,7 +30,7 @@ class HomeViewBody extends StatelessWidget {
           ),
         ),
         SliverPadding(
-          padding: const EdgeInsets.symmetric(horizontal: 20,vertical: 22),
+          padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 22),
           sliver: SliverGrid.builder(
             itemCount: 4,
             itemBuilder: (context, index) {
@@ -49,7 +49,6 @@ class HomeViewBody extends StatelessWidget {
         //     child: CustomGridveiw(),
         //   ),
         // ),
-
       ],
     );
   }
