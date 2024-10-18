@@ -62,7 +62,7 @@ class _SplashViewbodyState extends State<SplashViewbody>
 
   void navigateToHome()  {
     Future.delayed(
-      const Duration(seconds: 4),
+      const Duration(seconds: 2),
       () {
         // Get.to(() => const HomeView(),
         //     // calculations

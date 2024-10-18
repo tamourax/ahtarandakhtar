@@ -13,7 +13,6 @@ class WhatIsInYourKitchen extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 20),
       child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Expanded(
             child: Column(
@@ -56,7 +55,9 @@ class WhatIsInYourKitchen extends StatelessWidget {
               ],
             ),
           ),
-         
+          const SizedBox(
+            width: 20,
+          ),
           Flexible(
             child: ConstrainedBox(
               constraints: const BoxConstraints(
