@@ -13,7 +13,7 @@ class FoodCardTexts extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
         
       children: [
-        const SizedBox(height: 10,),
+        const Expanded(child: SizedBox()),
         FittedBox(
           fit: BoxFit.scaleDown,
           child: Text(

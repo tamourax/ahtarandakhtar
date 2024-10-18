@@ -36,7 +36,7 @@ class WhatIsInYourKitchen extends StatelessWidget {
                 fit: BoxFit.scaleDown,
                 child: ConstrainedBox(
                   constraints: const BoxConstraints(
-                      maxWidth: 200), // Constrain width to force scaling
+                      maxWidth: 200), 
                   child: Text(
                     'Enter your ingredients and discover delicious recipes you can make.',
                     style: AppTextStyle.medium11(context),
@@ -52,11 +52,11 @@ class WhatIsInYourKitchen extends StatelessWidget {
           const SizedBox(
             width: 20,
           ),
-          // Constrain the image with a minimum width
+
           Flexible(
             child: ConstrainedBox(
               constraints: const BoxConstraints(
-                minWidth: 100, // Minimum width before the image stops shrinking
+                minWidth: 100, 
               ),
               child: Image.asset(
                 'assets/images/Spoon.png',

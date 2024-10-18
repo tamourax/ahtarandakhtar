@@ -13,29 +13,31 @@ class FoodCookTime extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        Row(
-          children: [
-            const Icon(
-              Icons.access_time_filled,
-              size: 16,
-              color: AppColor.kPrimaryColor,
-            ),
-            const SizedBox(width: 4),
-            FittedBox(
-              fit: BoxFit.scaleDown,
-              child: Text(
-                '20 min',
-                style: AppTextStyle.medium11(context).copyWith(
-                  color: AppColor.kPrimaryColor,
-                  fontSize: 12
+        Flexible(
+          child: Row(
+            children: [
+              const Icon(
+                size: 15,
+                Icons.access_time_filled,
+                color: AppColor.kPrimaryColor,
+              ),
+              const SizedBox(width: 4),
+              FittedBox(
+                fit: BoxFit.scaleDown,
+                child: Text(
+                  '20 min',
+                  style: AppTextStyle.medium11(context).copyWith(
+                    color: AppColor.kPrimaryColor,
+                   
+                  ),
                 ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
         const Icon(
+          size: 15, 
           Icons.bolt,
-          size: 18,
           color: AppColor.kPrimaryColor,
         ),
       ],
