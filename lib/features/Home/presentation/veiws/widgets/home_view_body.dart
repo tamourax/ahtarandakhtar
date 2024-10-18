@@ -27,7 +27,7 @@ class _HomeViewBodyState extends State<HomeViewBody> {
               const SizedBox(
                 height: 22,
               ),
-              ConstrainedBox(constraints: const BoxConstraints(maxWidth: 400,),child: const WhatIsInYourKitchen()),
+              const WhatIsInYourKitchen(),
             ],
           ),
         ),

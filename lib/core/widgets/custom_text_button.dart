@@ -18,9 +18,12 @@ class CustomTextButton extends StatelessWidget {
       child: Padding(
         padding: const EdgeInsets.symmetric(
             horizontal: 20, vertical: 8),
-        child: Text(
-          'Find Recipes',
-          style: AppTextStyle.semiBold16(context).copyWith(fontWeight: FontWeight.w500),
+        child: FittedBox(
+          fit: BoxFit.fill,
+          child: Text(
+            'Find Recipes',
+            style: AppTextStyle.semiBold16(context).copyWith(fontWeight:  FontWeight.w600),
+          ),
         ),
       ),
     );

@@ -13,50 +13,54 @@ class WhatIsInYourKitchen extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 20),
       child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              Text(
-                'What’s in',
-                style: AppTextStyle.bold24(context),
-                overflow: TextOverflow.ellipsis,
-                softWrap: true,
-              ),
-              Text(
-                'Your Kitchen?',
-                style: AppTextStyle.bold24(context)
-                    .copyWith(color: AppColor.kbackgroundColor),
-              ),
-              const SizedBox(
-                height: 6,
-              ),
-              FittedBox(
-                fit: BoxFit.scaleDown,
-                child: ConstrainedBox(
-                  constraints: const BoxConstraints(
-                      maxWidth: 200), 
+          Expanded(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                FittedBox(
+                  fit: BoxFit.scaleDown,
                   child: Text(
-                    'Enter your ingredients and discover delicious recipes you can make.',
-                    style: AppTextStyle.medium11(context),
+                    'What’s in',
+                    style: AppTextStyle.bold24(context),
                   ),
                 ),
-              ),
-              const Padding(
-                padding: EdgeInsets.symmetric(vertical: 22),
-                child: CustomTextButton(),
-              ),
-            ],
+                FittedBox(
+                  fit: BoxFit.scaleDown,
+                  child: Text(
+                    'Your Kitchen?',
+                    style: AppTextStyle.bold24(context)
+                        .copyWith(color: AppColor.kbackgroundColor),
+                  ),
+                ),
+                const SizedBox(
+                  height: 6,
+                ),
+                FittedBox(
+                  fit: BoxFit.scaleDown,
+                  child: ConstrainedBox(
+                    constraints: const BoxConstraints(
+                        maxWidth: 200), // Ensures text does not overflow
+                    child: Text(
+                      'Enter your ingredients and discover delicious recipes you can make.',
+                      style: AppTextStyle.medium11(context),
+                    ),
+                  ),
+                ),
+                const Padding(
+                  padding: EdgeInsets.symmetric(vertical: 22),
+                  child: CustomTextButton(),
+                ),
+              ],
+            ),
           ),
-          const SizedBox(
-            width: 20,
-          ),
-
+         
           Flexible(
             child: ConstrainedBox(
               constraints: const BoxConstraints(
-                minWidth: 100, 
+                minWidth: 100,
               ),
               child: Image.asset(
                 'assets/images/Spoon.png',
