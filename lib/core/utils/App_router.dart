@@ -9,7 +9,7 @@ abstract class AppRouter {
     routes: [
       GoRoute(
         path: '/',
-        builder: (context, state) => const SplashVeiw(),
+        builder: (context, state) => const Homeview(),
       ),
       GoRoute(
         path: kHomeView,
