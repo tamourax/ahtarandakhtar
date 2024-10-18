@@ -20,4 +20,11 @@ class Assets {
   static const String assetsFoodItem = "assets/images/FoodItem.png";
   static const String assetsLogo = "assets/logo/Logo.svg";
   static const String assetsLogoAnimate = "assets/logo/LogoAnimate.gif";
+  static const String assetsvegetables =
+      "assets/images/listveiw/Vegetables.png";
+  static const String assetsfruits = "assets/images/listveiw/Fruits.png";
+  static const String assetsDairy = "assets/images/listveiw/Dairy.png";
+  static const String assetsherbsAndspices =
+      "assets/images/listveiw/Herbs & Spices.png";
+  static const String assetsprotein = "assets/images/listveiw/Protein.png";
 }
