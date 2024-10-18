@@ -35,10 +35,13 @@ class FoodCookTime extends StatelessWidget {
             ],
           ),
         ),
-        const Icon(
-          size: 15, 
-          Icons.bolt,
-          color: AppColor.kPrimaryColor,
+        FittedBox(
+          fit: BoxFit.fitWidth,
+          child: const Icon(
+           
+            Icons.bolt,
+            color: AppColor.kPrimaryColor,
+          ),
         ),
       ],
     );

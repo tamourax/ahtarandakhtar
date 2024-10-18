@@ -45,7 +45,7 @@ class _HomeViewBodyState extends State<HomeViewBody> {
               return const CustomCard();
             },
             gridDelegate:  SliverGridDelegateWithFixedCrossAxisCount(
-                crossAxisCount:MediaQuery.of(context).size.width <= 500? 2:3,
+                crossAxisCount:MediaQuery.of(context).size.width <= 270? 1: MediaQuery.of(context).size.width <= 500?2: 3,
                 childAspectRatio: 168 / 205,
                 mainAxisSpacing: 8,
                 crossAxisSpacing: 14),
