@@ -19,12 +19,12 @@ class CustomAppBar extends StatelessWidget {
         leading: GestureDetector(
             onTap: () {}, child: SvgPicture.asset(Assets.assetsImagesMenuIcon)),
         title: Text.rich(TextSpan(children: [
-          TextSpan(text: 'e7tar ', style: AppTextStyle.semiBoldMerienda16),
+          TextSpan(text: 'e7tar ', style: AppTextStyle.semiBoldMerienda16(context)),
           TextSpan(
               text: '& ',
-              style: AppTextStyle.semiBoldMerienda16
+              style: AppTextStyle.semiBoldMerienda16(context)
                   .copyWith(color: AppColor.kPrimaryColor)),
-          TextSpan(text: 'ekhtar', style: AppTextStyle.semiBoldMerienda16),
+          TextSpan(text: 'ekhtar', style: AppTextStyle.semiBoldMerienda16(context)),
         ])),
       ),
     );

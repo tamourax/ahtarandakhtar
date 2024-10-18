@@ -14,17 +14,24 @@ class FoodCardTexts extends StatelessWidget {
         
       children: [
         const SizedBox(height: 10,),
-        Text(
-          'Mushroom Pizza',
-          style: AppTextStyle.medium16.copyWith(color: Colors.black),
+        FittedBox(
+          fit: BoxFit.scaleDown,
+          child: Text(
+            'Mushroom Pizza',
+            style: AppTextStyle.medium16(context).copyWith(color: Colors.black),
+          ),
         ),
         const SizedBox(height: 2),
-        Text(
-          'Lorem ipsum dolor sit...',
-          style: AppTextStyle.regular12,
+        FittedBox(
+          fit: BoxFit.scaleDown,
+          child: Text(
+            'Lorem ipsum dolor sit...',
+            style: AppTextStyle.regular12(context),
+          ),
         ),
-        const SizedBox(height: 12),
+        const Spacer(),
         const FoodCookTime(),
+        const Expanded(child: SizedBox())
         
       ],
     );

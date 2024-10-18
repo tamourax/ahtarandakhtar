@@ -1,3 +1,4 @@
+import 'package:ahtarandakhtar/core/utils/App_router.dart';
 import 'package:ahtarandakhtar/features/Home/presentation/veiws/Homeview.dart';
 import 'package:ahtarandakhtar/features/Splash/presentation/Splash_veiw.dart';
 import 'package:flutter/material.dart';
@@ -11,9 +12,9 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return  MaterialApp.router(
       debugShowCheckedModeBanner: false,
-      home: SplashVeiw(),
+      routerConfig:  AppRouter.router,
     );
   }
 }

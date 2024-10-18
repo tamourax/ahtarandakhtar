@@ -21,11 +21,14 @@ class FoodCookTime extends StatelessWidget {
               color: AppColor.kPrimaryColor,
             ),
             const SizedBox(width: 4),
-            Text(
-              '20 min',
-              style: AppTextStyle.medium11.copyWith(
-                color: AppColor.kPrimaryColor,
-                fontSize: 12
+            FittedBox(
+              fit: BoxFit.scaleDown,
+              child: Text(
+                '20 min',
+                style: AppTextStyle.medium11(context).copyWith(
+                  color: AppColor.kPrimaryColor,
+                  fontSize: 12
+                ),
               ),
             ),
           ],

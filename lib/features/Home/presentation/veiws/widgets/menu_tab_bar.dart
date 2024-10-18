@@ -20,37 +20,40 @@ class _MenuTabBarState extends State<MenuTabBar> {
     return Container(
       margin: const EdgeInsets.only(top: 12),
       height: 50,
-      child: ListView(
-        scrollDirection: Axis.horizontal,
-        children: tabBarData.map((label) {
-          return Padding(
-            padding: const EdgeInsets.only(right: 6),
-            child: ChoiceChip(
-              showCheckmark: false,
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(50),
+      child: Center(
+        child: ListView(
+          shrinkWrap: true,
+          scrollDirection: Axis.horizontal,
+          children: tabBarData.map((label) {
+            return Padding(
+              padding: const EdgeInsets.only(right: 6),
+              child: ChoiceChip(
+                showCheckmark: false,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(50),
+                ),
+                padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
+                side: BorderSide(
+                    width: 1,
+                    color: selectedChip == label ? sideColor : Colors.white),
+                backgroundColor: AppColor.kPrimaryColor.withOpacity(0.1),
+                
+                selectedColor: AppColor.kPrimaryColor.withOpacity(0.1),
+                label: Text(
+                  label,
+                  style: AppTextStyle.medium14(context)
+                      .copyWith(color: AppColor.kPrimaryColor),
+                ),
+                selected: selectedChip == label,
+                onSelected: (bool selected) {
+                  setState(() {
+                    selectedChip = selected ? label : selectedChip;
+                  });
+                },
               ),
-              padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
-              side: BorderSide(
-                  width: 1,
-                  color: selectedChip == label ? sideColor : Colors.white),
-              backgroundColor: AppColor.kPrimaryColor.withOpacity(0.1),
-              
-              selectedColor: AppColor.kPrimaryColor.withOpacity(0.1),
-              label: Text(
-                label,
-                style: AppTextStyle.medium14
-                    .copyWith(color: AppColor.kPrimaryColor),
-              ),
-              selected: selectedChip == label,
-              onSelected: (bool selected) {
-                setState(() {
-                  selectedChip = selected ? label : selectedChip;
-                });
-              },
-            ),
-          );
-        }).toList(),
+            );
+          }).toList(),
+        ),
       ),
     );
   }

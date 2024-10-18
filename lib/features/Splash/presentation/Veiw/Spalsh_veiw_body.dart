@@ -60,7 +60,7 @@ class _SplashViewbodyState extends State<SplashViewbody>
     animationController.forward();
   }
 
-  void navigateToHome() {
+  void navigateToHome()  {
     Future.delayed(
       const Duration(seconds: 4),
       () {

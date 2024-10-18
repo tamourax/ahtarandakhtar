@@ -16,22 +16,32 @@ class WhatIsInYourKitchen extends StatelessWidget {
         children: [
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisSize: MainAxisSize.min,
             children: [
               Text(
                 'What’s in',
-                style: AppTextStyle.bold24,
+                style: AppTextStyle.bold24(context),
+                overflow: TextOverflow.ellipsis,
+                softWrap: true,
               ),
               Text(
                 'Your Kitchen?',
-                style: AppTextStyle.bold24
+                style: AppTextStyle.bold24(context)
                     .copyWith(color: AppColor.kbackgroundColor),
               ),
               const SizedBox(
                 height: 6,
               ),
-              Text(
-                'Enter your ingredients and discover\ndelicious recipes ypu can make.',
-                style: AppTextStyle.medium11,
+              FittedBox(
+                fit: BoxFit.scaleDown,
+                child: ConstrainedBox(
+                  constraints: const BoxConstraints(
+                      maxWidth: 200), // Constrain width to force scaling
+                  child: Text(
+                    'Enter your ingredients and discover delicious recipes you can make.',
+                    style: AppTextStyle.medium11(context),
+                  ),
+                ),
               ),
               const Padding(
                 padding: EdgeInsets.symmetric(vertical: 22),
@@ -40,11 +50,20 @@ class WhatIsInYourKitchen extends StatelessWidget {
             ],
           ),
           const SizedBox(
-            width: 9,
+            width: 20,
           ),
+          // Constrain the image with a minimum width
           Flexible(
-            child: Image.asset('assets/images/Spoon.png'),
-          )
+            child: ConstrainedBox(
+              constraints: const BoxConstraints(
+                minWidth: 100, // Minimum width before the image stops shrinking
+              ),
+              child: Image.asset(
+                'assets/images/Spoon.png',
+                fit: BoxFit.cover,
+              ),
+            ),
+          ),
         ],
       ),
     );
