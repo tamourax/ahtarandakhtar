@@ -1,3 +1,4 @@
+import 'package:ahtarandakhtar/features/Home/presentation/veiws/widgets/app_text_logo.dart';
 import 'package:flutter/material.dart';
 
 class SlidingText extends StatelessWidget {
@@ -15,10 +16,7 @@ class SlidingText extends StatelessWidget {
         builder: (context, _) {
           return SlideTransition(
             position: slidingAnimation,
-            child: const Text(
-              'A7tar & Ekhtar',
-              textAlign: TextAlign.center,
-            ),
+            child: Center(child: const AppTextLogo()),
           );
         });
   }
