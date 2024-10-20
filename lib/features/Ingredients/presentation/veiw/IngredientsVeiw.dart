@@ -4,11 +4,13 @@ import 'package:flutter/material.dart';
 
 class Ingredientsveiw extends StatelessWidget {
   const Ingredientsveiw({super.key});
- static const ingredientsveiwRoute = '/Ingredientsveiw';
+  static const ingredientsveiwRoute = '/Ingredientsveiw';
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-      bottomNavigationBar: Customnavbar(selectedInd: 1,),
+      bottomNavigationBar: Customnavbar(
+        selectedInd: 1,
+      ),
       body: Ingredientsveiwbody(),
     );
   }

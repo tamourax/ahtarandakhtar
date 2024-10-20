@@ -10,6 +10,7 @@ class Customlistveiw extends StatelessWidget {
     final List<MapEntry<String, String>> mapEntries =
         listViewDataMap.entries.toList();
     return ListView.builder(
+      physics: const BouncingScrollPhysics(),
       padding: const EdgeInsets.only(left: 20),
       scrollDirection: Axis.horizontal,
       itemBuilder: (context, index) {

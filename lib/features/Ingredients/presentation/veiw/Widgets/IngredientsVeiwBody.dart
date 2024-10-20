@@ -6,6 +6,8 @@ import 'package:ahtarandakhtar/features/Ingredients/presentation/veiw/Widgets/Cu
 import 'package:ahtarandakhtar/features/Ingredients/presentation/veiw/Widgets/entered_ingredients_header.dart';
 import 'package:flutter/material.dart';
 
+import 'IngredientsAppBar.dart';
+
 class Ingredientsveiwbody extends StatelessWidget {
   const Ingredientsveiwbody({super.key});
 
@@ -31,9 +33,9 @@ class Ingredientsveiwbody extends StatelessWidget {
               padding: const EdgeInsets.only(left: 20),
               child: Column(
                 children: [
-                  const CustomAppBar(),
+                  const CustomSecondAppBar(),
                   const SizedBox(
-                    height: 26,
+                    height: 16,
                   ),
                   Align(
                     alignment: Alignment.centerLeft,
@@ -50,19 +52,24 @@ class Ingredientsveiwbody extends StatelessWidget {
                     height: 16,
                   ),
                   const Cusomtextfelid(),
-                  const SizedBox(
-                    height: 20,
-                  ),
                 ],
               ),
             ),
           ),
+          const Padding(
+            padding: EdgeInsets.only(top: 200, left: 0),
+            child: SizedBox(
+              height: 90,
+              child: Customlistveiw(),
+            ),
+          ),
         ]),
-        const SizedBox(height: 90, child: Customlistveiw()),
-        const SizedBox(height: 30,),
+        const SizedBox(
+          height: 30,
+        ),
         const Padding(
-          padding:  EdgeInsets.only(left: 20),
-          child:  EnteredIngredientsHeader(),
+          padding: EdgeInsets.only(left: 20),
+          child: EnteredIngredientsHeader(),
         ),
       ],
     );
