@@ -3,7 +3,9 @@ import 'package:ahtarandakhtar/core/utils/app_textstyle.dart';
 import 'package:flutter/material.dart';
 
 class Cusomtextfelid extends StatelessWidget {
-  const Cusomtextfelid({super.key});
+  const Cusomtextfelid({super.key, required this.HintText});
+
+  final String HintText;
 
   @override
   Widget build(BuildContext context) {
@@ -29,7 +31,7 @@ class Cusomtextfelid extends StatelessWidget {
               borderSide: const BorderSide(color: Colors.white),
             ),
             border: OutlineInputBorder(borderRadius: BorderRadius.circular(50)),
-            hintText: 'Enter an ingredient',
+            hintText: HintText,
             hintStyle: AppTextStyle.regular11(context).copyWith(
                 color: const Color(0xff7E7E7E),
                 fontFamily: 'Poppins',
