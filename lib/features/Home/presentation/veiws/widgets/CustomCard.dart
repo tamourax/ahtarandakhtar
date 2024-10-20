@@ -11,8 +11,8 @@ class CustomCard extends StatelessWidget {
       aspectRatio: 168 / 205,
       child: Container(
         decoration: BoxDecoration(
-          image: const DecorationImage(
-            image: AssetImage(Assets.assetsFoodItem),
+          image:  const DecorationImage(
+            image: AssetImage(Assets.assetsImagesFoodItem),
             fit: BoxFit.cover,
           ),
           borderRadius: BorderRadius.circular(12),

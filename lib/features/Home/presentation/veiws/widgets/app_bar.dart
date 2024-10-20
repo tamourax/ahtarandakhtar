@@ -13,14 +13,11 @@ class CustomAppBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.only(left: 20),
-      child: ListTile(
-        contentPadding: const EdgeInsets.symmetric(horizontal: 2),
-        leading: GestureDetector(
-            onTap: () {}, child: SvgPicture.asset(Assets.assetsImagesMenuIcon)),
-        title: AppTextLogo(),
-      ),
+    return ListTile(
+      contentPadding: const EdgeInsets.symmetric(horizontal: 2),
+      leading: GestureDetector(
+          onTap: () {}, child: SvgPicture.asset(Assets.assetsImagesMenuIcon)),
+      title: const AppTextLogo(),
     );
   }
 }

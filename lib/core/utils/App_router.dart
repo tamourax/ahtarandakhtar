@@ -4,17 +4,21 @@ import 'package:ahtarandakhtar/features/Splash/presentation/Splash_veiw.dart';
 import 'package:go_router/go_router.dart';
 
 abstract class AppRouter {
-  static const kHomeView = '/homeView';
+ 
 
   static final router = GoRouter(
     routes: [
       GoRoute(
         path: '/',
+        builder: (context, state) => const SplashVeiw(),
+      ),
+      GoRoute(
+        path: Homeview.homeViewRouteName,
         builder: (context, state) => const Homeview(),
       ),
       GoRoute(
-        path: kHomeView,
-        builder: (context, state) => const SplashVeiw(),
+        path: Ingredientsveiw.ingredientsveiwRoute,
+        builder: (context, state) => const Ingredientsveiw(),
       ),
     ],
   );

@@ -1,3 +1,4 @@
+import 'package:ahtarandakhtar/features/Home/presentation/veiws/Homeview.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
@@ -38,7 +39,7 @@ class _SplashViewbodyState extends State<SplashViewbody>
       mainAxisAlignment: MainAxisAlignment.center,
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
-        Image.asset(Assets.assetsLogoAnimate),
+        Image.asset(Assets.assetsImagesFoodItem),
         const SizedBox(
           height: 4,
         ),
@@ -62,14 +63,14 @@ class _SplashViewbodyState extends State<SplashViewbody>
 
   void navigateToHome()  {
     Future.delayed(
-      const Duration(seconds: 2),
+       const Duration(seconds: 2),
       () {
         // Get.to(() => const HomeView(),
         //     // calculations
         //     transition: Transition.fade,
         //     duration: kTranstionDuration);
 
-        GoRouter.of(context).push(AppRouter.kHomeView);
+       GoRouter.of(context).push(Homeview.homeViewRouteName);
       },
     );
   }

@@ -10,8 +10,6 @@ class Listveiwitem extends StatelessWidget {
     final List<MapEntry<String, String>> mapEntries =
         listViewDataMap.entries.toList();
     return Container(
-        height: 75,
-        width: 75,
         padding: const EdgeInsets.all(10),
         decoration: BoxDecoration(
             color: Colors.white, borderRadius: BorderRadius.circular(6)),

@@ -29,12 +29,13 @@ environment:
 # versions available, run `flutter pub outdated`.
 dependencies:
   cupertino_icons: ^1.0.8
-  go_router: ^14.3.0
+  device_preview: ^1.2.0
   flutter:
     sdk: flutter
   flutter_launcher_icons: ^0.14.1
+  go_router: ^14.3.0
+  persistent_bottom_nav_bar: ^6.2.1
   svg_flutter: ^0.0.1
-  device_preview: ^1.2.0
 
 dev_dependencies:
   flutter_lints: ^4.0.0
@@ -93,30 +94,18 @@ flutter_assets:
   output_path: lib/core/utils
   filename: AppImage.dart
 
-
-
-
-
-
-
-
-
 flutter_launcher_icons:
-  
+
   image_path_android: "assets/logo/LogoPng.png"
 
-  android: true 
+  android: true
   ios: true
-  
 
-   
   remove_alpha_ios: true
   background_color_ios: "#ffffff"
-  
- 
+
   windows:
-    
+
     generate: true
     image_path: "assets/logo/LogoPng.png"
     icon_size: 48
- 

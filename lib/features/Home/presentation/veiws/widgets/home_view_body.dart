@@ -23,7 +23,10 @@ class _HomeViewBodyState extends State<HomeViewBody> {
          SliverToBoxAdapter(
           child: Column(
             children: [
-              const CustomAppBar(),
+              const Padding(
+                padding: EdgeInsets.only(left: 20),
+                child: CustomAppBar(),
+              ),
               const SizedBox(
                 height: 22,
               ),

@@ -3,6 +3,7 @@ import 'package:ahtarandakhtar/core/utils/app_textstyle.dart';
 import 'package:ahtarandakhtar/features/Home/presentation/veiws/widgets/app_bar.dart';
 import 'package:ahtarandakhtar/features/Ingredients/presentation/veiw/Widgets/CusomTextFelid.dart';
 import 'package:ahtarandakhtar/features/Ingredients/presentation/veiw/Widgets/CustomListVeiw.dart';
+import 'package:ahtarandakhtar/features/Ingredients/presentation/veiw/Widgets/entered_ingredients_header.dart';
 import 'package:flutter/material.dart';
 
 class Ingredientsveiwbody extends StatelessWidget {
@@ -26,15 +27,15 @@ class Ingredientsveiwbody extends StatelessWidget {
                     AppColor.kPrimaryColor,
                   ],
                 )),
-            child: Column(
-              children: [
-                const CustomAppBar(),
-                const SizedBox(
-                  height: 26,
-                ),
-                Padding(
-                  padding: const EdgeInsets.only(left: 20),
-                  child: Align(
+            child: Padding(
+              padding: const EdgeInsets.only(left: 20),
+              child: Column(
+                children: [
+                  const CustomAppBar(),
+                  const SizedBox(
+                    height: 26,
+                  ),
+                  Align(
                     alignment: Alignment.centerLeft,
                     child: Text(
                       'My Ingredients',
@@ -45,19 +46,24 @@ class Ingredientsveiwbody extends StatelessWidget {
                       ),
                     ),
                   ),
-                ),
-                const SizedBox(
-                  height: 16,
-                ),
-                const Cusomtextfelid(),
-                const SizedBox(
-                  height: 20,
-                ),
-              ],
+                  const SizedBox(
+                    height: 16,
+                  ),
+                  const Cusomtextfelid(),
+                  const SizedBox(
+                    height: 20,
+                  ),
+                ],
+              ),
             ),
           ),
         ]),
-        SizedBox(height: 110, child: Customlistveiw()),
+        const SizedBox(height: 90, child: Customlistveiw()),
+        const SizedBox(height: 30,),
+        const Padding(
+          padding:  EdgeInsets.only(left: 20),
+          child:  EnteredIngredientsHeader(),
+        ),
       ],
     );
   }
