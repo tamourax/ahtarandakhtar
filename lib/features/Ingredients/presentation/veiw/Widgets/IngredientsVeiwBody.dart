@@ -51,8 +51,8 @@ class Ingredientsveiwbody extends StatelessWidget {
                   const SizedBox(
                     height: 16,
                   ),
-                  const Cusomtextfelid(
-                    HintText: 'Enter an ingredient',
+                  const Customtextfelid(
+                    hintText: 'Enter an ingredient',
                   ),
                 ],
               ),

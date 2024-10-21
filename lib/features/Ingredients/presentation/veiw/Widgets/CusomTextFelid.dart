@@ -2,10 +2,10 @@ import 'package:ahtarandakhtar/core/utils/app_color.dart';
 import 'package:ahtarandakhtar/core/utils/app_textstyle.dart';
 import 'package:flutter/material.dart';
 
-class Cusomtextfelid extends StatelessWidget {
-  const Cusomtextfelid({super.key, required this.HintText});
+class Customtextfelid extends StatelessWidget {
+  const Customtextfelid({super.key, required this.hintText});
 
-  final String HintText;
+  final String hintText;
 
   @override
   Widget build(BuildContext context) {
@@ -31,7 +31,7 @@ class Cusomtextfelid extends StatelessWidget {
               borderSide: const BorderSide(color: Colors.white),
             ),
             border: OutlineInputBorder(borderRadius: BorderRadius.circular(50)),
-            hintText: HintText,
+            hintText: hintText,
             hintStyle: AppTextStyle.regular11(context).copyWith(
                 color: const Color(0xff7E7E7E),
                 fontFamily: 'Poppins',

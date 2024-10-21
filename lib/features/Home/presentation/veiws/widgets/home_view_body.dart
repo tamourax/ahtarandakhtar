@@ -8,6 +8,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
+import 'CustomgridVeiw.dart';
+
 class HomeViewBody extends StatefulWidget {
   const HomeViewBody({super.key});
 
@@ -20,7 +22,7 @@ class _HomeViewBodyState extends State<HomeViewBody> {
   Widget build(BuildContext context) {
     return CustomScrollView(
       slivers: [
-         SliverToBoxAdapter(
+        SliverToBoxAdapter(
           child: Column(
             children: [
               const Padding(
@@ -30,7 +32,11 @@ class _HomeViewBodyState extends State<HomeViewBody> {
               const SizedBox(
                 height: 22,
               ),
-              ConstrainedBox(constraints: const BoxConstraints(maxWidth: 400,),child: const WhatIsInYourKitchen()),
+              ConstrainedBox(
+                  constraints: const BoxConstraints(
+                    maxWidth: 400,
+                  ),
+                  child: const WhatIsInYourKitchen()),
             ],
           ),
         ),
@@ -40,19 +46,9 @@ class _HomeViewBodyState extends State<HomeViewBody> {
             child: MenuTabBar(),
           ),
         ),
-        SliverPadding(
-          padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 22),
-          sliver: SliverGrid.builder(
-            itemCount: 6,
-            itemBuilder: (context, index) {
-              return const CustomCard();
-            },
-            gridDelegate:  SliverGridDelegateWithFixedCrossAxisCount(
-                crossAxisCount:MediaQuery.of(context).size.width <= 270? 1: MediaQuery.of(context).size.width <= 500?2: 3,
-                childAspectRatio: 168 / 205,
-                mainAxisSpacing: 8,
-                crossAxisSpacing: 14),
-          ),
+        const SliverPadding(
+          padding: EdgeInsets.symmetric(horizontal: 20, vertical: 22),
+          sliver: CustomGridVeiw(),
         ),
         // SliverToBoxAdapter(
         //   child: SizedBox(
