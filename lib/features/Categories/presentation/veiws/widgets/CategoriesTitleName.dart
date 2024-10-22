@@ -11,15 +11,13 @@ class CategoriestitleName extends StatelessWidget {
     return Row(children: [
       Image.asset(
         Assets.assetsImagesListveiwVegetables,
-        height: 20,
-        width: 20,
       ),
       const SizedBox(
-        width: 5,
+        width: 10,
       ),
       Text(
         'Vegetables',
-        style: AppTextStyle.semiBold14(context).copyWith(color: Colors.black),
+        style: AppTextStyle.semiBold18(context),
       ),
     ]);
   }

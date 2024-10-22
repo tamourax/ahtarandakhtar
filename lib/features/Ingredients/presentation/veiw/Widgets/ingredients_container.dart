@@ -15,7 +15,7 @@ class IngredientsContainer extends StatelessWidget {
       child: Row(
         mainAxisSize: MainAxisSize.min,
         children: [
-          Image.asset(Assets.assetsImagesPepperContainerPic),
+          Image.asset(Assets.assetsImagesPepper),
           const SizedBox(width: 8,),
           Text('Bell pepper',style: AppTextStyle.medium14(context),),
           const SizedBox(width: 8,),

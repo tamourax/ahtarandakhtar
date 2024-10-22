@@ -6,10 +6,11 @@ import 'widgets/CategoriesVeiwBody.dart';
 
 class CategoriesView extends StatelessWidget {
   const CategoriesView({super.key});
-
+  static const String routeName = '/categoriesview';
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-        floatingActionButton: Customaddbuttom(), body: Categoriesveiwbody());
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+        floatingActionButton: Customaddbuttom(),body:  CategoriesViewBody(), );
   }
 }

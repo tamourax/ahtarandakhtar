@@ -65,7 +65,7 @@ class AppTextStyle {
   static TextStyle regular12(BuildContext context) {
     return TextStyle(
       color: Colors.grey,
-      fontSize: getResponsiveFontSize(context, fontSize: 12.8),
+      fontSize: getResponsiveFontSize(context, fontSize: 12),
       fontWeight: FontWeight.normal, // Regular
       fontFamily: 'Poppins',
     );

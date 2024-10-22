@@ -1,5 +1,7 @@
+import 'package:ahtarandakhtar/features/Categories/presentation/veiws/CategoriesVeiw.dart';
 import 'package:ahtarandakhtar/features/Ingredients/presentation/data/ListVeiwdata.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'ListVeiwItem.dart';
 
 class Customlistveiw extends StatelessWidget {
@@ -17,6 +19,9 @@ class Customlistveiw extends StatelessWidget {
         return Container(
           margin: const EdgeInsets.symmetric(horizontal: 8),
           child: Listveiwitem(
+            ontap: () {
+              GoRouter.of(context).push(CategoriesView.routeName);
+            },
             image: mapEntries[index].value,
             title: mapEntries[index].key,
           ),

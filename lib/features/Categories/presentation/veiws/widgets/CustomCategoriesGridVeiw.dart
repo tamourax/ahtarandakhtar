@@ -1,28 +1,42 @@
+import 'package:ahtarandakhtar/features/Categories/presentation/veiws/widgets/active_category_item.dart';
 import 'package:flutter/material.dart';
 
-import 'CustomCategoriesGridItem.dart';
+import 'inactive_category_item.dart';
 
-class CustomCategoiresGridVeiw extends StatelessWidget {
+class CustomCategoiresGridVeiw extends StatefulWidget {
   const CustomCategoiresGridVeiw({
     super.key,
   });
 
   @override
+  State<CustomCategoiresGridVeiw> createState() => _CustomCategoiresGridVeiwState();
+}
+
+class _CustomCategoiresGridVeiwState extends State<CustomCategoiresGridVeiw> {
+  List<bool> isSelectedList = List.generate(12, (index) => false);
+
+  @override
   Widget build(BuildContext context) {
-    return SliverGrid.builder(
-      itemCount: 6,
+    return GridView.builder(
+      itemCount: 12,
+      gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+        crossAxisCount: 3,
+        childAspectRatio: 100 / 100,
+        mainAxisSpacing: 7,
+        crossAxisSpacing: 8,
+      ),
       itemBuilder: (context, index) {
-        return const CustomCategoriesGridItem();
+        return GestureDetector(
+          onTap: () {
+            setState(() {
+              isSelectedList[index] = !isSelectedList[index];
+            });
+          },
+          child: isSelectedList[index]
+              ? const ActiveCategoryItem()
+              : const InActiveCategorieItem(),
+        );
       },
-      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-          crossAxisCount: MediaQuery.of(context).size.width <= 270
-              ? 1
-              : MediaQuery.of(context).size.width <= 500
-                  ? 2
-                  : 3,
-          childAspectRatio: 168 / 205,
-          mainAxisSpacing: 8,
-          crossAxisSpacing: 14),
     );
   }
 }

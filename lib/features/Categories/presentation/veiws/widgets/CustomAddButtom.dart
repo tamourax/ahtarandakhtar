@@ -7,28 +7,32 @@ class Customaddbuttom extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return FloatingActionButton(
-        onPressed: () => {},
-        child: Container(
-          color: AppColor.kPrimaryColor,
-          height: 40,
-          width: 350,
-          child: Row(
-            children: [
-              const Icon(
-                Icons.add,
-                size: 13,
-              ),
-              const SizedBox(
-                width: 5,
-              ),
-              Text(
-                'ADD',
-                style: AppTextStyle.semiBold14(context)
-                    .copyWith(color: Colors.white),
-              )
-            ],
-          ),
-        ));
+    return Container(
+      width: double.infinity,
+      color:  Colors.white,
+      child: Padding(
+        padding: const EdgeInsets.symmetric(vertical: 16,horizontal: 19),
+        child: FloatingActionButton(
+          backgroundColor: AppColor.kPrimaryColor,
+            onPressed: () => {},
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                const Icon(
+                  Icons.add,
+                  color: Colors.white,
+                ),
+                const SizedBox(
+                  width: 5,
+                ),
+                Text(
+                  'Add',
+                  style: AppTextStyle.semiBold14(context)
+                      .copyWith(color: Colors.white),
+                )
+              ],
+            )),
+      ),
+    );
   }
 }
