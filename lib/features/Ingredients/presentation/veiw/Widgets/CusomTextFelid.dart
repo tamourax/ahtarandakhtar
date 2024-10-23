@@ -3,10 +3,10 @@ import 'package:ahtarandakhtar/core/utils/app_textstyle.dart';
 import 'package:flutter/material.dart';
 
 class Customtextfelid extends StatelessWidget {
-  const Customtextfelid({super.key, required this.hintText});
+  const Customtextfelid({super.key, required this.hintText, required this.borderwidth});
 
   final String hintText;
-
+  final double borderwidth;
   @override
   Widget build(BuildContext context) {
     return SizedBox(
@@ -19,8 +19,12 @@ class Customtextfelid extends StatelessWidget {
             fillColor: Colors.white,
             enabledBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(50),
-              borderSide: const BorderSide(color: Colors.white),
+              borderSide:  BorderSide(color:borderwidth == 0 ? Colors.white : Colors.grey),
             ),
+            focusedBorder:OutlineInputBorder(
+              borderRadius: BorderRadius.circular(50),
+              borderSide:  BorderSide(color:borderwidth == 0 ? Colors.white : Colors.grey),
+            ) ,
             prefixIcon: const Icon(
               Icons.search,
               size: 16,
@@ -28,13 +32,13 @@ class Customtextfelid extends StatelessWidget {
             ),
             disabledBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(50),
-              borderSide: const BorderSide(color: Colors.white),
+              borderSide:  BorderSide(color: borderwidth == 0 ? Colors.white : Colors.grey),
             ),
-            border: OutlineInputBorder(borderRadius: BorderRadius.circular(50)),
+            border: OutlineInputBorder(borderRadius: BorderRadius.circular(50),
+                borderSide:  BorderSide(color:borderwidth == 0 ? Colors.white : Colors.grey )),
             hintText: hintText,
             hintStyle: AppTextStyle.regular11(context).copyWith(
                 color: const Color(0xff7E7E7E),
-                fontFamily: 'Poppins',
                 fontSize: 14),
           ),
         ),

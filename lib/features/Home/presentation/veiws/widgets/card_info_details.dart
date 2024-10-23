@@ -10,15 +10,16 @@ class CardInfoDetails extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    bool isDarkMode = Theme.of(context).brightness == Brightness.dark;
     return AspectRatio(
           aspectRatio: 168 / 86,
           child: Container(
-            decoration: const BoxDecoration(
-              color: Colors.white,
-              borderRadius: BorderRadius.all(Radius.circular(12)),
+            decoration:  BoxDecoration(
+              color:isDarkMode? Colors.black: Colors.white,
+              borderRadius: const BorderRadius.all(Radius.circular(12)),
             ),
             padding: const EdgeInsets.symmetric(horizontal: 11),
-            child: const FoodCardTexts(),
+            child:  FoodCardTexts(isDark: isDarkMode,),
           ),
         );
 

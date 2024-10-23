@@ -93,7 +93,6 @@ class AppTextStyle {
   // Merienda SemiBold 16
   static TextStyle semiBoldMerienda16(BuildContext context) {
     return TextStyle(
-      color: Colors.black,
       fontSize: getResponsiveFontSize(context, fontSize: 16),
       fontWeight: FontWeight.w600, // SemiBold
       fontFamily: 'Merienda',

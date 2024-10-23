@@ -18,7 +18,7 @@ class InActiveCategorieItem extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: 10),
         child: Column(
           children: [
-            const SizedBox(height: 18,),
+            const Expanded(child:  SizedBox()),
             Image.asset(Assets.assetsImagesPotatoes),
             const Spacer(),
             FittedBox(
@@ -29,7 +29,7 @@ class InActiveCategorieItem extends StatelessWidget {
                     .copyWith(color: Colors.black),
               ),
             ),
-            const SizedBox(height: 10,)
+            const Expanded(child:  SizedBox()),
           ],
         ),
       ),

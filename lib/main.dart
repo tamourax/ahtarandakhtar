@@ -1,4 +1,5 @@
 import 'package:ahtarandakhtar/core/utils/App_router.dart';
+import 'package:ahtarandakhtar/core/utils/ThemesData.dart';
 import 'package:device_preview/device_preview.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
@@ -16,6 +17,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp.router(
+      theme: kApplightTheme,
+      darkTheme: kAppdarkTheme,
       locale: DevicePreview.locale(context),
       builder: DevicePreview.appBuilder,
       debugShowCheckedModeBanner: false,

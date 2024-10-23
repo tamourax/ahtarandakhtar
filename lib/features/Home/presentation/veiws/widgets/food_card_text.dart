@@ -4,9 +4,9 @@ import 'package:flutter/material.dart';
 
 class FoodCardTexts extends StatelessWidget {
   const FoodCardTexts({
-    super.key,
+    super.key, required this.isDark,
   });
-
+final bool isDark;
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -18,7 +18,7 @@ class FoodCardTexts extends StatelessWidget {
           fit: BoxFit.scaleDown,
           child: Text(
             'Mushroom Pizza',
-            style: AppTextStyle.medium16(context).copyWith(color: Colors.black),
+            style: AppTextStyle.medium16(context).copyWith(color:isDark ? Colors.white : Colors.black),
           ),
         ),
         const SizedBox(height: 2),

@@ -51,6 +51,7 @@ class Ingredientsveiwbody extends StatelessWidget {
                     height: 16,
                   ),
                   const Customtextfelid(
+                    borderwidth: 0,
                     hintText: 'Enter an ingredient',
                   ),
                 ],

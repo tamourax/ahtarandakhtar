@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
 
 ThemeData kAppdarkTheme = ThemeData(
+  brightness: Brightness.dark,
     scaffoldBackgroundColor: Colors.black,
     primaryColor: Colors.white,
     appBarTheme: const AppBarTheme(
+      
+      iconTheme: IconThemeData(color: Colors.white),
       backgroundColor: Colors.black,
       elevation: 0,
       centerTitle: true,
@@ -11,6 +14,18 @@ ThemeData kAppdarkTheme = ThemeData(
         color: Colors.white,
       ),
     ),
+    textSelectionTheme: const TextSelectionThemeData(
+      selectionColor: Colors.white,
+    ),
+    primaryTextTheme: TextTheme(
+      bodyLarge: const TextStyle(
+        color: Colors.white,
+      ),
+      bodyMedium: const TextStyle(
+        color: Colors.white,
+      ),
+      )
+    ,
     textTheme: const TextTheme(
       bodyLarge: TextStyle(
         color: Colors.white,
@@ -44,6 +59,7 @@ ThemeData kAppdarkTheme = ThemeData(
     ));
 
 ThemeData kApplightTheme = ThemeData(
+  brightness: Brightness.light,
     scaffoldBackgroundColor: Colors.white,
     primaryColor: Colors.white,
     appBarTheme: const AppBarTheme(

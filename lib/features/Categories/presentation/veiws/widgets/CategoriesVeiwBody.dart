@@ -1,5 +1,5 @@
 import 'package:ahtarandakhtar/features/Categories/presentation/veiws/widgets/CategoriesTitleName.dart';
-import 'package:ahtarandakhtar/features/Home/presentation/veiws/widgets/app_bar.dart';
+import 'package:ahtarandakhtar/features/Categories/presentation/veiws/widgets/app_bar.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../Ingredients/presentation/veiw/Widgets/CusomTextFelid.dart';
@@ -26,11 +26,10 @@ class CategoriesViewBody extends StatelessWidget {
             height: 20,
           ),
           Customtextfelid(
+            borderwidth: 1,
             hintText: 'Search',
           ),
-          SizedBox(
-            height: 20,
-          ),
+          
           // CustomCategoriesGridItem()
           Expanded(child: CustomCategoiresGridVeiw()),
         ],

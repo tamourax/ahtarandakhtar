@@ -1,7 +1,3 @@
-import 'package:ahtarandakhtar/core/utils/size_config.dart';
-import 'package:ahtarandakhtar/features/Home/presentation/veiws/widgets/CustomCard.dart';
-
-import 'package:ahtarandakhtar/features/Home/presentation/veiws/widgets/app_bar.dart';
 import 'package:ahtarandakhtar/features/Home/presentation/veiws/widgets/menu_tab_bar.dart';
 import 'package:ahtarandakhtar/features/Home/presentation/veiws/widgets/what_is_in_your_kitchen.dart';
 import 'package:flutter/cupertino.dart';
@@ -25,10 +21,7 @@ class _HomeViewBodyState extends State<HomeViewBody> {
         SliverToBoxAdapter(
           child: Column(
             children: [
-              const Padding(
-                padding: EdgeInsets.only(left: 20),
-                child: CustomAppBar(),
-              ),
+             
               const SizedBox(
                 height: 22,
               ),
